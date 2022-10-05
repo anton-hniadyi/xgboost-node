@@ -17,7 +17,7 @@
       "cflags_cc!": [ "-fno-exceptions" ],
       "ccflags": [
         "-g",
-        "-std=c++11",
+        "-std=c++14",
         "-Wall",
         "-Wextra",
         "-fexceptions"
@@ -45,13 +45,13 @@
           "OS!='win'",
           {
             "cflags+": [
-              "-std=c++11"
+              "-std=c++14"
             ],
             "cflags_c+": [
-              "-std=c++11"
+              "-std=c++14"
             ],
             "cflags_cc+": [
-              "-std=c++11"
+              "-std=c++14"
             ],
           }
         ],

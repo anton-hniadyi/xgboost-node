@@ -1,13 +1,15 @@
 {
-  "name": "xgboost",
-  "version": "1.1.0",
+  "name": "@bonniernews/xgboost",
+  "version": "2.0.0",
   "description": "XGBoost in Node.js ",
   "main": "index.js",
   "types": "index.d.ts",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "test": "npm run compile; mocha",
-    "cover": "istanbul cover _mocha",
-    "install": "bash ./build.sh; node-gyp rebuild",
+    "install": "bash ./build.sh; node-gyp --verbose -j max rebuild",
     "compile": "tsc --p tsconfig.json"
   },
   "repository": {
@@ -33,14 +35,13 @@
   "license": "Apache-2.0",
   "dependencies": {
     "bindings": "^1.2.1",
-    "nan": "^2.6.2",
+    "nan": "^2.16.0",
     "async": "^2.5.0"
   },
   "devDependencies": {
     "@types/node": "^8.0.9",
-    "chai": "^4.0.2",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.4.2",
+    "chai": "^4.2.0",
+    "mocha": "^9.2.0",
     "typescript": "^2.4.1"
   }
 }

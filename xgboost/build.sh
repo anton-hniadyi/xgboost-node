@@ -7,14 +7,14 @@
 # See additional instruction in doc/build.md
 set -e
 
-if make; then
+if make -j; then
     echo "Successfully build multi-thread xgboost"
 else
     echo "-----------------------------"
     echo "Building multi-thread xgboost failed"
     echo "Start to build single-thread xgboost"
-    make clean_all
-    make config=make/minimum.mk
+    make -j clean_all
+    make -j config=make/minimum.mk
     if [ $? -eq 0 ] ;then
       echo "Successfully build single-thread xgboost"
       echo "If you want multi-threaded version"

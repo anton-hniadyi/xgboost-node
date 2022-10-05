@@ -1,7 +1,5 @@
 ## XGBoost-Node
 
-[![Build Status](https://travis-ci.org/nuanio/xgboost-node.svg?branch=master)](https://travis-ci.org/nuanio/xgboost-node) [![NPM version](https://img.shields.io/npm/v/xgboost.svg)](https://www.npmjs.com/package/xgboost) [![codecov](https://codecov.io/gh/nuanio/xgboost-node/branch/master/graph/badge.svg)](https://codecov.io/gh/nuanio/xgboost-node) [![license](http://dmlc.github.io/img/apache2.svg)](./LICENSE)
-
 eXtreme Gradient Boosting Package in Node.js
 
 XGBoost-Node is a Node.js interface of [XGBoost](https://github.com/dmlc/xgboost). XGBoost is a library from [DMLC](http://dmlc.ml/). It is designed and optimized for boosted trees. The underlying algorithm of XGBoost is an extension of the classic gbm algorithm. With multi-threads and regularization, XGBoost is able to utilize more computational power and get a more accurate prediction.
