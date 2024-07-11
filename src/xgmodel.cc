@@ -28,7 +28,7 @@ void XGModel::Init(v8::Local<v8::Object> exports)
   Nan::SetPrototypeMethod(tpl, "predict", Predict);
   Nan::SetPrototypeMethod(tpl, "predictAsync", PredictAsync);
 
-  v8::Local<v8::Context> context = exports->CreationContext();
+  v8::Local<v8::Context> context = exports->GetCreationContext().ToLocalChecked();
   constructor.Reset(tpl->GetFunction(context).ToLocalChecked());
   exports->Set(context, Nan::New("CXGModel").ToLocalChecked(), tpl->GetFunction(context).ToLocalChecked());
 }
