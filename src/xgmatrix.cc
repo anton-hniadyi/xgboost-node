@@ -27,7 +27,7 @@ void XGMatrix::Init(v8::Local<v8::Object> exports)
   Nan::SetPrototypeMethod(tpl, "col", GetCol);
   Nan::SetPrototypeMethod(tpl, "row", GetRow);
 
-  v8::Local<v8::Context> context = exports->CreationContext();
+  v8::Local<v8::Context> context = exports->GetCreationContext().ToLocalChecked();
   constructor.Reset(tpl->GetFunction(context).ToLocalChecked());
   exports->Set(context, Nan::New("CXGMatrix").ToLocalChecked(), tpl->GetFunction(context).ToLocalChecked());
 }
